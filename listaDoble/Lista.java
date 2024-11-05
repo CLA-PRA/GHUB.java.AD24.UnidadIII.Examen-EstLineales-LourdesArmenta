@@ -1,10 +1,6 @@
 package listaDoble;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import java.util.HashSet;
-import java.util.Set;
 
 
 public class Lista <T>{
@@ -128,37 +124,7 @@ public class Lista <T>{
      }
 
      public int removerPorValor(T valor){
-        if (cabeza == null) {
-            return -1; // Lista vacía
-        }
-    
-        // Si el valor está en el primer nodo
-        if (cabeza.getValor().equals(valor)) {
-            cabeza = cabeza.getSiguiente();
-            tamanio--;
-            return 0; // Índice del nodo eliminado
-        }
-    
-        Nodo<T> actual = cabeza;
-        Nodo<T> anterior = null;
-        int indice = 0;
-    
-        // Buscar el nodo con el valor
-        while (actual != null && !actual.getValor().equals(valor)) {
-            anterior = actual;
-            actual = actual.getSiguiente();
-            indice++;
-        }
-    
-        // Si el valor no se encuentra
-        if (actual == null) {
-            return -1;
-        }
-    
-        // Eliminar el nodo
-        anterior.setSiguiente(actual.getSiguiente());
-        tamanio--;
-        return indice; // Índice del nodo eliminado
+       
     }
 
      
@@ -201,48 +167,11 @@ public class Lista <T>{
     }
 
     public void podarLista(){
-        if (cabeza == null) {
-            return; // Lista vacía
-        }
-    
-        Set<T> elementosUnicos = new HashSet<>();
-        Nodo<T> actual = cabeza;
-        Nodo<T> anterior = null;
-    
-        while (actual != null) {
-            if (elementosUnicos.contains(actual.getValor())) {
-                // Eliminar nodo repetido
-                anterior.setSiguiente(actual.getSiguiente());
-                tamanio--;
-            } else {
-                // Agregar elemento al conjunto de elementos únicos
-                elementosUnicos.add(actual.getValor());
-                anterior = actual;
-            }
-            actual = actual.getSiguiente();
-        }
-
+       
     }
 
     public void concatenarListas(Lista<T> otraLista){
-        if (otraLista == null || otraLista.cabeza == null) {
-            return; // La otra lista está vacía o es nula
-        }
-    
-        Nodo<T> actual = cabeza;
-        if (actual == null) {
-            // Si la lista actual está vacía, simplemente asignar la otra lista
-            cabeza = otraLista.cabeza;
-        } else {
-            // Encontrar el último nodo de la lista actual
-            while (actual.getSiguiente() != null) {
-                actual = actual.getSiguiente();
-            }
-            // Conectar el último nodo de la lista actual con la cabeza de la otra lista
-            actual.setSiguiente(otraLista.cabeza);
-        }
-        // Ajustar el tamaño de la lista actual
-        tamanio += otraLista.tamanio;
+       
 
 
     }
