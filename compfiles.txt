@@ -1,0 +1,17 @@
+./lista/Lista.java
+./lista/Persona.java
+./lista/Nodo.java
+./lista/PosicionIlegalException.java
+./listaDoble/Lista.java
+./listaDoble/ClienteMainListaDobleString.java
+./listaDoble/Nodo.java
+./listaDoble/ClienteMainListaDoble.java
+./listaDoble/PosicionIlegalException.java
+./hash/Persona.java
+./hash/TestHashTable.java
+./cola/Nodo.java
+./cola/Cola.java
+./pila/Nodo.java
+./pila/Pila.java
+./miPrincipal/Principal.java
+./miTest/AppTest.java
